@@ -1,0 +1,234 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<link rel="shortcut icon" href="../../../../static/images/favicons/favicon_402x.png">
+<link rel="stylesheet" href="../../../../static/css/normalize.css">
+<link rel="stylesheet" href="../../../../static/css/style.css">
+
+
+<title>Bohemian Coding - Default</title>
+
+</head>
+<body class="preload sketch support" itemscope itemtype="http://schema.org/Product">
+<header class="main-header">
+	<div class="wrapper" role="navigation">
+		<nav class="group product-nav">
+			<h1>
+				<a href="../../../../sketch" class="highlight">
+					<span role="banner" itemprop="brand" class="ir">Bohemian Coding</span>
+					<span itemprop="name">Sketch</span> <small class="version-3">3</small>
+				</a>
+			</h1>
+			<span class="section-toggle">Menu</span>
+			<ul class="group">
+				<li><a href="../../../whats-new" class="">What's new?</a></li>
+				<li><a href="../../../features" class="">Features</a></li>
+				<li><a href="../../../resources" class="">Resources</a></li>
+				<li><a href="../../faq" class="active">Support</a></li>
+				<li><a href="../../../buy" class="buy">Buy now</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+
+<section>
+	<div class="wrapper">
+		
+		<nav class="support-nav main" role="navigation">
+			<ul>
+				<li> 
+					<a href="../../faq" class="">FAQ</a>
+				</li>
+				<li> 
+					<a href="../../documentation" class="">Documentation</a>
+				</li>
+				<li> 
+					<a href="../../updates" class="">Updates</a>
+				</li>
+				<li> 
+					<a href="../../developer" class="active">Developer</a>
+				</li>
+			</ul>
+		</nav>
+		
+		
+		<div class="row group">
+			<aside class="col span-3" role="complementary">
+				<nav class="support-nav toc" role="navigation">
+					
+
+  
+    <h2>Introduction</h2>
+    
+    <ul>
+    
+      <li><a href="../01-introduction/01.html">Plugin Basics</a></li>
+    
+      <li><a href="../01-introduction/02.html">Getting Started</a></li>
+    
+      <li><a href="../01-introduction/03.html">Debugging</a></li>
+    
+    </ul>
+  
+    <h2>Common Tasks</h2>
+    
+    <ul>
+    
+      <li><a href="../02-common-tasks/01.html">Basics</a></li>
+    
+      <li><a href="../02-common-tasks/02.html">Working with Selections</a></li>
+    
+      <li><a href="../02-common-tasks/05.html">User Input &amp; Feedback</a></li>
+    
+    </ul>
+  
+    <h2>Reference</h2>
+    
+    <ul>
+    
+      <li><a href="00.html">Changelog</a></li>
+    
+      <li><a href="GKRect.html">GKRect</a></li>
+    
+      <li><a href="MSArtboardGroup.html">MSArtboardGroup</a></li>
+    
+      <li><a href="MSContentDrawView.html">MSContentDrawView</a></li>
+    
+      <li><a href="MSDocument.html">MSDocument</a></li>
+    
+      <li><a href="MSGradient.html">MSGradient</a></li>
+    
+      <li><a href="MSGradientStop.html">MSGradientStop</a></li>
+    
+      <li><a href="MSGraphicsContextSettings.html">MSGraphicsContextSettings</a></li>
+    
+      <li><a href="MSLayer.html">MSLayer</a></li>
+    
+      <li><a href="MSLayerGroup.html">MSLayerGroup</a></li>
+    
+      <li><a href="MSPage.html">MSPage</a></li>
+    
+      <li><a href="MSRect.html">MSRect</a></li>
+    
+      <li><a href="MSRulerData.html">MSRulerData</a></li>
+    
+      <li><a href="MSSliceLayer.html">MSSliceLayer</a></li>
+    
+      <li><a href="MSStyle.html">MSStyle</a></li>
+    
+      <li><a href="MSStyleBorder.html">MSStyleBorder</a></li>
+    
+      <li><a href="MSStyleFill.html">MSStyleFill</a></li>
+    
+      <li><a href="MSStyleInnerShadow.html">MSStyleInnerShadow</a></li>
+    
+      <li><a href="MSStylePartCollection.html">MSStylePartCollection</a></li>
+    
+      <li><a href="MSStyleShadow.html">MSStyleShadow</a></li>
+    
+      <li><a href="MSTextLayer.html">MSTextLayer</a></li>
+    
+    </ul>
+  
+    <h2>Resources</h2>
+    
+    <ul>
+    
+      <li><a href="../04-resources/01.html">Links</a></li>
+    
+    </ul>
+  
+
+
+				</nav>
+			</aside>
+			
+			<article class="" role="main">
+				<h1>MSSliceLayer</h1>
+				<ul>
+<li>Inherits from: <a href="MSLayer.html">MSLayer</a></li>
+<li>Related to: <a href="MSRect.html">MSRect</a>, <a href="MSSliceLayer.html">MSSliceLayer</a></li>
+</ul>
+
+<h2>Overview</h2>
+
+<p>Subclass of <a href="MSLayer.html">MSLayer</a> representing a slice in the document. Although it may have a style attribute, this is never used.</p>
+
+<p>MSSliceLayer has —like MSLayer— a <code>frame</code> property that is an <a href="MSRect.html">MSRect</a> which determines its position in the canvas or inside its artboard.</p>
+
+<p>To export a slice you can use something like the following code:</p>
+
+<pre><code>var slice = [[[doc currentPage] slices] firstObject]
+[doc saveArtboardOrSlice:slice toFile:"~/desktop/test.png"]
+</code></pre>
+
+<p>See the <a href="../02-common-tasks/04.html">Exporting</a> section for more advanced examples.</p>
+
+				
+					<div class="support-pagination">
+						<a href="MSRulerData.html" class="prev"><span>MSRulerData</span></a>
+						<a href="MSStyle.html" class="next"><span>MSStyle</span></a>
+					</div>
+				
+			</article>
+		</div>
+	</div>
+</section>
+
+
+
+
+<footer class="main-footer" role="contentinfo">
+	<div class="wrapper">
+		<nav>
+			<small>&copy; Bohemian Coding</small>
+			<ul role="navigation">
+				
+<li><a href="../../../../about-us">About us</a></li>
+<li><a href="../../../../../bohemiancoding.tumblr.com/default.htm">Blog</a></li>
+<li><a href="../../../../press">Press</a></li>
+<li><a href="../../../../../twitter.com/bohemiancoding">Twitter</a></li>
+<li><a href="../../../../../facebook.com/sketchapp">Facebook</a></li>
+
+			</ul>
+		</nav>
+	</div>
+</footer>
+
+<script src="../../../../../ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="../../../../static/js/shadowbox.js"></script>
+<script src="../../../../static/js/main.js"></script>
+
+<script>
+$(function(){
+	$(".support-nav.toc a").each(function(){
+		if ($(this).prop('href') == window.location.href) {
+            $(this).addClass('active');
+        }
+	});
+});
+</script>
+
+<script type="text/javascript">
+  var GoSquared = {};
+  GoSquared.acct = "GSN-033658-T";
+  (function(w){
+    function gs(){
+      w._gstc_lt = +new Date;
+      var d = document, g = d.createElement("script");
+      g.type = "text/javascript";
+      g.src = "../../../../../d1l6p2sc9645hc.cloudfront.net/tracker.js";
+      var s = d.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(g, s);
+    }
+    w.addEventListener ?
+      w.addEventListener("load", gs, false) :
+      w.attachEvent("onload", gs);
+  })(window);
+</script>
+</body>
+</html>

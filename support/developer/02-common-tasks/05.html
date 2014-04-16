@@ -1,0 +1,283 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<link rel="shortcut icon" href="../../../../static/images/favicons/favicon_402x.png">
+<link rel="stylesheet" href="../../../../static/css/normalize.css">
+<link rel="stylesheet" href="../../../../static/css/style.css">
+
+
+<title>Bohemian Coding - Sketch Developer</title>
+
+</head>
+<body class="preload sketch support" itemscope itemtype="http://schema.org/Product">
+<header class="main-header">
+	<div class="wrapper" role="navigation">
+		<nav class="group product-nav">
+			<h1>
+				<a href="../../../../sketch" class="highlight">
+					<span role="banner" itemprop="brand" class="ir">Bohemian Coding</span>
+					<span itemprop="name">Sketch</span> <small class="version-3">3</small>
+				</a>
+			</h1>
+			<span class="section-toggle">Menu</span>
+			<ul class="group">
+				<li><a href="../../../whats-new" class="">What's new?</a></li>
+				<li><a href="../../../features" class="">Features</a></li>
+				<li><a href="../../../resources" class="">Resources</a></li>
+				<li><a href="../../faq" class="active">Support</a></li>
+				<li><a href="../../../buy" class="buy">Buy now</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+
+<section>
+	<div class="wrapper">
+		
+		<nav class="support-nav main" role="navigation">
+			<ul>
+				<li> 
+					<a href="../../faq" class="">FAQ</a>
+				</li>
+				<li> 
+					<a href="../../documentation" class="">Documentation</a>
+				</li>
+				<li> 
+					<a href="../../updates" class="">Updates</a>
+				</li>
+				<li> 
+					<a href="../../developer" class="active">Developer</a>
+				</li>
+			</ul>
+		</nav>
+		
+		
+		<div class="row group">
+			<aside class="col span-3" role="complementary">
+				<nav class="support-nav toc" role="navigation">
+					
+
+  
+    <h2>Introduction</h2>
+    
+    <ul>
+    
+      <li><a href="../01-introduction/01.html">Plugin Basics</a></li>
+    
+      <li><a href="../01-introduction/02.html">Getting Started</a></li>
+    
+      <li><a href="../01-introduction/03.html">Debugging</a></li>
+    
+    </ul>
+  
+    <h2>Common Tasks</h2>
+    
+    <ul>
+    
+      <li><a href="01.html">Basics</a></li>
+    
+      <li><a href="02.html">Working with Selections</a></li>
+    
+      <li><a href="05.html">User Input &amp; Feedback</a></li>
+    
+    </ul>
+  
+    <h2>Reference</h2>
+    
+    <ul>
+    
+      <li><a href="../03-reference/00.html">Changelog</a></li>
+    
+      <li><a href="../03-reference/GKRect.html">GKRect</a></li>
+    
+      <li><a href="../03-reference/MSArtboardGroup.html">MSArtboardGroup</a></li>
+    
+      <li><a href="../03-reference/MSContentDrawView.html">MSContentDrawView</a></li>
+    
+      <li><a href="../03-reference/MSDocument.html">MSDocument</a></li>
+    
+      <li><a href="../03-reference/MSGradient.html">MSGradient</a></li>
+    
+      <li><a href="../03-reference/MSGradientStop.html">MSGradientStop</a></li>
+    
+      <li><a href="../03-reference/MSGraphicsContextSettings.html">MSGraphicsContextSettings</a></li>
+    
+      <li><a href="../03-reference/MSLayer.html">MSLayer</a></li>
+    
+      <li><a href="../03-reference/MSLayerGroup.html">MSLayerGroup</a></li>
+    
+      <li><a href="../03-reference/MSPage.html">MSPage</a></li>
+    
+      <li><a href="../03-reference/MSRect.html">MSRect</a></li>
+    
+      <li><a href="../03-reference/MSRulerData.html">MSRulerData</a></li>
+    
+      <li><a href="../03-reference/MSSliceLayer.html">MSSliceLayer</a></li>
+    
+      <li><a href="../03-reference/MSStyle.html">MSStyle</a></li>
+    
+      <li><a href="../03-reference/MSStyleBorder.html">MSStyleBorder</a></li>
+    
+      <li><a href="../03-reference/MSStyleFill.html">MSStyleFill</a></li>
+    
+      <li><a href="../03-reference/MSStyleInnerShadow.html">MSStyleInnerShadow</a></li>
+    
+      <li><a href="../03-reference/MSStylePartCollection.html">MSStylePartCollection</a></li>
+    
+      <li><a href="../03-reference/MSStyleShadow.html">MSStyleShadow</a></li>
+    
+      <li><a href="../03-reference/MSTextLayer.html">MSTextLayer</a></li>
+    
+    </ul>
+  
+    <h2>Resources</h2>
+    
+    <ul>
+    
+      <li><a href="../04-resources/01.html">Links</a></li>
+    
+    </ul>
+  
+
+
+				</nav>
+			</aside>
+			
+			<article class="" role="main">
+				<h1>User Input &amp; Feedback</h1>
+				<p>Making awesome stuff behind the courtains is cool, but sometimes you'll want to communicate your users the results of your complex operations. When that moment arrives, you have some options to interact with users:</p>
+
+<h2>Getting user input</h2>
+
+<p>You can call the <code>[doc askForUserInput]</code> method to (surprise) ask for user input and use it on your plugins. It takes a parameter: <code>initialValue</code>, which sets the default value on the input field.</p>
+
+<p>As an example, this is how you'd ask your user for his name:</p>
+
+<pre><code>var name = [doc askForUserInput:"What is your name?" initialValue:""]
+</code></pre>
+
+<p>Note that <code>initialValue</code> is a required parameter. Use "" if you don't want to use a default value.</p>
+
+<p>If you need more complex user interactions, you can use the NSAlert class in Cocoa.</p>
+
+<p>For example, this is how you create a dropdown menu with options:</p>
+
+<pre><code>function createSelect(msg, items, selectedItemIndex){
+  selectedItemIndex = selectedItemIndex || 0
+
+  var accessory = [[NSComboBox alloc] initWithFrame:NSMakeRect(0,0,200,25)]
+  [accessory addItemsWithObjectValues:items]
+  [accessory selectItemAtIndex:selectedItemIndex]
+
+  var alert = [[NSAlert alloc] init]
+  [alert setMessageText:msg]
+  [alert addButtonWithTitle:'OK']
+  [alert addButtonWithTitle:'Cancel']
+  [alert setAccessoryView:accessory]
+
+  var responseCode = [alert runModal]
+  var sel = [accessory indexOfSelectedItem]
+
+  return [responseCode, sel]
+}
+
+var options = ['None', 'One', 'Two', 'Three', 'Four']
+
+var choice = createSelect('Choose an option',options, 1)
+
+log(choice)
+</code></pre>
+
+<p>This is what it looks like when running:</p>
+
+<p><img src="../../../../static/images/developer/select.png" alt="" /></p>
+
+<h2>Feedback</h2>
+
+<p>If you need to display information to your user, you can use two features: <code>[doc showMessage]</code> or <code>[NSApplication displayDialog]</code>. The first is a lightweight and subtle way of showing information at the bottom center of Sketch's canvas. The second shows a regular alert dialog.</p>
+
+<p>This is how you'd use <code>[doc showMessage]</code>:</p>
+
+<pre><code>[doc showMessage:"The operation is complete"]
+</code></pre>
+
+<p>If you want a more "in your face" style, you can use:</p>
+
+<pre><code>var app = [NSApplication sharedApplication];
+[app displayDialog:"The operation is complete" withTitle:"We're done"]
+</code></pre>
+
+<p>and you'll get a dialog like this:</p>
+
+<p><img src="../../../../static/images/developer/alert.png" alt="" /></p>
+
+<p>If you want to use feedback for debugging purposes, we recommend you to take a look at the <a href="../01-introduction/03.html">Debugging</a> section.</p>
+
+				
+					<div class="support-pagination">
+						<a href="02.html" class="prev"><span>Working with Selections</span></a>
+						
+					</div>
+				
+			</article>
+		</div>
+	</div>
+</section>
+
+
+
+
+<footer class="main-footer" role="contentinfo">
+	<div class="wrapper">
+		<nav>
+			<small>&copy; Bohemian Coding</small>
+			<ul role="navigation">
+				
+<li><a href="../../../../about-us">About us</a></li>
+<li><a href="../../../../../bohemiancoding.tumblr.com/default.htm">Blog</a></li>
+<li><a href="../../../../press">Press</a></li>
+<li><a href="../../../../../twitter.com/bohemiancoding">Twitter</a></li>
+<li><a href="../../../../../facebook.com/sketchapp">Facebook</a></li>
+
+			</ul>
+		</nav>
+	</div>
+</footer>
+
+<script src="../../../../../ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="../../../../static/js/shadowbox.js"></script>
+<script src="../../../../static/js/main.js"></script>
+
+<script>
+$(function(){
+	$(".support-nav.toc a").each(function(){
+		if ($(this).prop('href') == window.location.href) {
+            $(this).addClass('active');
+        }
+	});
+});
+</script>
+
+<script type="text/javascript">
+  var GoSquared = {};
+  GoSquared.acct = "GSN-033658-T";
+  (function(w){
+    function gs(){
+      w._gstc_lt = +new Date;
+      var d = document, g = d.createElement("script");
+      g.type = "text/javascript";
+      g.src = "../../../../../d1l6p2sc9645hc.cloudfront.net/tracker.js";
+      var s = d.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(g, s);
+    }
+    w.addEventListener ?
+      w.addEventListener("load", gs, false) :
+      w.attachEvent("onload", gs);
+  })(window);
+</script>
+</body>
+</html>

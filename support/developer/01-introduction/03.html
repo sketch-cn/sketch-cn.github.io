@@ -1,0 +1,259 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<link rel="shortcut icon" href="../../../../static/images/favicons/favicon_402x.png">
+<link rel="stylesheet" href="../../../../static/css/normalize.css">
+<link rel="stylesheet" href="../../../../static/css/style.css">
+
+
+<title>Bohemian Coding - Default</title>
+
+</head>
+<body class="preload sketch support" itemscope itemtype="http://schema.org/Product">
+<header class="main-header">
+	<div class="wrapper" role="navigation">
+		<nav class="group product-nav">
+			<h1>
+				<a href="../../../../sketch" class="highlight">
+					<span role="banner" itemprop="brand" class="ir">Bohemian Coding</span>
+					<span itemprop="name">Sketch</span> <small class="version-3">3</small>
+				</a>
+			</h1>
+			<span class="section-toggle">Menu</span>
+			<ul class="group">
+				<li><a href="../../../whats-new" class="">What's new?</a></li>
+				<li><a href="../../../features" class="">Features</a></li>
+				<li><a href="../../../resources" class="">Resources</a></li>
+				<li><a href="../../faq" class="active">Support</a></li>
+				<li><a href="../../../buy" class="buy">Buy now</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+
+<section>
+	<div class="wrapper">
+		
+		<nav class="support-nav main" role="navigation">
+			<ul>
+				<li> 
+					<a href="../../faq" class="">FAQ</a>
+				</li>
+				<li> 
+					<a href="../../documentation" class="">Documentation</a>
+				</li>
+				<li> 
+					<a href="../../updates" class="">Updates</a>
+				</li>
+				<li> 
+					<a href="../../developer" class="active">Developer</a>
+				</li>
+			</ul>
+		</nav>
+		
+		
+		<div class="row group">
+			<aside class="col span-3" role="complementary">
+				<nav class="support-nav toc" role="navigation">
+					
+
+  
+    <h2>Introduction</h2>
+    
+    <ul>
+    
+      <li><a href="01.html">Plugin Basics</a></li>
+    
+      <li><a href="02.html">Getting Started</a></li>
+    
+      <li><a href="03.html">Debugging</a></li>
+    
+    </ul>
+  
+    <h2>Common Tasks</h2>
+    
+    <ul>
+    
+      <li><a href="../02-common-tasks/01.html">Basics</a></li>
+    
+      <li><a href="../02-common-tasks/02.html">Working with Selections</a></li>
+    
+      <li><a href="../02-common-tasks/05.html">User Input &amp; Feedback</a></li>
+    
+    </ul>
+  
+    <h2>Reference</h2>
+    
+    <ul>
+    
+      <li><a href="../03-reference/00.html">Changelog</a></li>
+    
+      <li><a href="../03-reference/GKRect.html">GKRect</a></li>
+    
+      <li><a href="../03-reference/MSArtboardGroup.html">MSArtboardGroup</a></li>
+    
+      <li><a href="../03-reference/MSContentDrawView.html">MSContentDrawView</a></li>
+    
+      <li><a href="../03-reference/MSDocument.html">MSDocument</a></li>
+    
+      <li><a href="../03-reference/MSGradient.html">MSGradient</a></li>
+    
+      <li><a href="../03-reference/MSGradientStop.html">MSGradientStop</a></li>
+    
+      <li><a href="../03-reference/MSGraphicsContextSettings.html">MSGraphicsContextSettings</a></li>
+    
+      <li><a href="../03-reference/MSLayer.html">MSLayer</a></li>
+    
+      <li><a href="../03-reference/MSLayerGroup.html">MSLayerGroup</a></li>
+    
+      <li><a href="../03-reference/MSPage.html">MSPage</a></li>
+    
+      <li><a href="../03-reference/MSRect.html">MSRect</a></li>
+    
+      <li><a href="../03-reference/MSRulerData.html">MSRulerData</a></li>
+    
+      <li><a href="../03-reference/MSSliceLayer.html">MSSliceLayer</a></li>
+    
+      <li><a href="../03-reference/MSStyle.html">MSStyle</a></li>
+    
+      <li><a href="../03-reference/MSStyleBorder.html">MSStyleBorder</a></li>
+    
+      <li><a href="../03-reference/MSStyleFill.html">MSStyleFill</a></li>
+    
+      <li><a href="../03-reference/MSStyleInnerShadow.html">MSStyleInnerShadow</a></li>
+    
+      <li><a href="../03-reference/MSStylePartCollection.html">MSStylePartCollection</a></li>
+    
+      <li><a href="../03-reference/MSStyleShadow.html">MSStyleShadow</a></li>
+    
+      <li><a href="../03-reference/MSTextLayer.html">MSTextLayer</a></li>
+    
+    </ul>
+  
+    <h2>Resources</h2>
+    
+    <ul>
+    
+      <li><a href="../04-resources/01.html">Links</a></li>
+    
+    </ul>
+  
+
+
+				</nav>
+			</aside>
+			
+			<article class="" role="main">
+				<h1>Debugging</h1>
+				<p>Even the best programmers need help debugging their code. Sketch 3.0 provides improved error reporting, so now finding errors is quicker than ever.</p>
+
+<h2>Basic Debugging</h2>
+
+<p>Whenever you're running some code, you can use the <code>log()</code> feature to show the value of a variable, or check whether an object is defined.</p>
+
+<p>For example, if you want to display the value of a variable called <code>rectangles</code>, you'd do:</p>
+
+<pre><code>log(rectangles)
+</code></pre>
+
+<p>To see the output of the <code>log()</code> function, you need to open Console.app:</p>
+
+<p><img src="../../../../static/images/developer/console.png" alt="" /></p>
+
+<p>where you'll see:</p>
+
+<pre><code>08:50:39 Sketch: 4
+</code></pre>
+
+<p>Which means the value for <code>rectangles</code> is 4, but probably already knew that.</p>
+
+<p>Once you start debugging more complex plugins, you'll probably want to filter log messages in Console.app, as all the system logs are output there. To do that, click on the Filter text field at the top right, and write 'Sketch'.</p>
+
+<p>If you want to create a permanent filter, click File › New System Log Query… and fill the window with these values:</p>
+
+<p><img src="../../../../static/images/developer/console-query.png" alt="" /></p>
+
+<p>Then click 'Ok', and you'll have a new section called 'Sketch' on the 'System Log Queries' at the left column.</p>
+
+<p>If you are more of the command line type, you can open a Terminal.app window and run this:</p>
+
+<pre><code>$ tail -f /var/log/system.log|grep Sketch
+</code></pre>
+
+<h2>Showing debug output</h2>
+
+<p>Sometimes, when debugging Plugins, you may want to check the output of a command without having to switch to another app. For those cases, you have two options:</p>
+
+<ol>
+<li>you can use one of the techniques discussed in <a href="../02-common-tasks/05.html">User Input &amp; Feedback</a> (<code>alert</code>, <code>[doc showMessage]</code> or Cocoa dialogs), or</li>
+<li>use <a href="../../../../../https@github.com/samdeane/sketch-scripts/blob/master/Log%20Example.sketchplugin">Sam Deane's log panel</a>, which uses Cocoa code to create a persistent log panel you can see without leaving Sketch.</li>
+</ol>
+
+				
+					<div class="support-pagination">
+						<a href="02.html" class="prev"><span>Getting Started</span></a>
+						
+					</div>
+				
+			</article>
+		</div>
+	</div>
+</section>
+
+
+
+
+<footer class="main-footer" role="contentinfo">
+	<div class="wrapper">
+		<nav>
+			<small>&copy; Bohemian Coding</small>
+			<ul role="navigation">
+				
+<li><a href="../../../../about-us">About us</a></li>
+<li><a href="../../../../../bohemiancoding.tumblr.com/default.htm">Blog</a></li>
+<li><a href="../../../../press">Press</a></li>
+<li><a href="../../../../../twitter.com/bohemiancoding">Twitter</a></li>
+<li><a href="../../../../../facebook.com/sketchapp">Facebook</a></li>
+
+			</ul>
+		</nav>
+	</div>
+</footer>
+
+<script src="../../../../../ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="../../../../static/js/shadowbox.js"></script>
+<script src="../../../../static/js/main.js"></script>
+
+<script>
+$(function(){
+	$(".support-nav.toc a").each(function(){
+		if ($(this).prop('href') == window.location.href) {
+            $(this).addClass('active');
+        }
+	});
+});
+</script>
+
+<script type="text/javascript">
+  var GoSquared = {};
+  GoSquared.acct = "GSN-033658-T";
+  (function(w){
+    function gs(){
+      w._gstc_lt = +new Date;
+      var d = document, g = d.createElement("script");
+      g.type = "text/javascript";
+      g.src = "../../../../../d1l6p2sc9645hc.cloudfront.net/tracker.js";
+      var s = d.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(g, s);
+    }
+    w.addEventListener ?
+      w.addEventListener("load", gs, false) :
+      w.attachEvent("onload", gs);
+  })(window);
+</script>
+</body>
+</html>

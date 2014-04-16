@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<link rel="shortcut icon" href="../../../../static/images/favicons/favicon_402x.png">
+<link rel="stylesheet" href="../../../../static/css/normalize.css">
+<link rel="stylesheet" href="../../../../static/css/style.css">
+
+
+<title>Bohemian Coding - Sketch Developer</title>
+
+</head>
+<body class="preload sketch support" itemscope itemtype="http://schema.org/Product">
+<header class="main-header">
+	<div class="wrapper" role="navigation">
+		<nav class="group product-nav">
+			<h1>
+				<a href="../../../../sketch" class="highlight">
+					<span role="banner" itemprop="brand" class="ir">Bohemian Coding</span>
+					<span itemprop="name">Sketch</span> <small class="version-3">3</small>
+				</a>
+			</h1>
+			<span class="section-toggle">Menu</span>
+			<ul class="group">
+				<li><a href="../../../whats-new" class="">What's new?</a></li>
+				<li><a href="../../../features" class="">Features</a></li>
+				<li><a href="../../../resources" class="">Resources</a></li>
+				<li><a href="../../faq" class="active">Support</a></li>
+				<li><a href="../../../buy" class="buy">Buy now</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+
+<section>
+	<div class="wrapper">
+		
+		<nav class="support-nav main" role="navigation">
+			<ul>
+				<li> 
+					<a href="../../faq" class="">FAQ</a>
+				</li>
+				<li> 
+					<a href="../../documentation" class="">Documentation</a>
+				</li>
+				<li> 
+					<a href="../../updates" class="">Updates</a>
+				</li>
+				<li> 
+					<a href="../../developer" class="active">Developer</a>
+				</li>
+			</ul>
+		</nav>
+		
+		
+		<div class="row group">
+			<aside class="col span-3" role="complementary">
+				<nav class="support-nav toc" role="navigation">
+					
+
+  
+    <h2>Introduction</h2>
+    
+    <ul>
+    
+      <li><a href="../01-introduction/01.html">Plugin Basics</a></li>
+    
+      <li><a href="../01-introduction/02.html">Getting Started</a></li>
+    
+      <li><a href="../01-introduction/03.html">Debugging</a></li>
+    
+    </ul>
+  
+    <h2>Common Tasks</h2>
+    
+    <ul>
+    
+      <li><a href="01.html">Basics</a></li>
+    
+      <li><a href="02.html">Working with Selections</a></li>
+    
+      <li><a href="05.html">User Input &amp; Feedback</a></li>
+    
+    </ul>
+  
+    <h2>Reference</h2>
+    
+    <ul>
+    
+      <li><a href="../03-reference/00.html">Changelog</a></li>
+    
+      <li><a href="../03-reference/GKRect.html">GKRect</a></li>
+    
+      <li><a href="../03-reference/MSArtboardGroup.html">MSArtboardGroup</a></li>
+    
+      <li><a href="../03-reference/MSContentDrawView.html">MSContentDrawView</a></li>
+    
+      <li><a href="../03-reference/MSDocument.html">MSDocument</a></li>
+    
+      <li><a href="../03-reference/MSGradient.html">MSGradient</a></li>
+    
+      <li><a href="../03-reference/MSGradientStop.html">MSGradientStop</a></li>
+    
+      <li><a href="../03-reference/MSGraphicsContextSettings.html">MSGraphicsContextSettings</a></li>
+    
+      <li><a href="../03-reference/MSLayer.html">MSLayer</a></li>
+    
+      <li><a href="../03-reference/MSLayerGroup.html">MSLayerGroup</a></li>
+    
+      <li><a href="../03-reference/MSPage.html">MSPage</a></li>
+    
+      <li><a href="../03-reference/MSRect.html">MSRect</a></li>
+    
+      <li><a href="../03-reference/MSRulerData.html">MSRulerData</a></li>
+    
+      <li><a href="../03-reference/MSSliceLayer.html">MSSliceLayer</a></li>
+    
+      <li><a href="../03-reference/MSStyle.html">MSStyle</a></li>
+    
+      <li><a href="../03-reference/MSStyleBorder.html">MSStyleBorder</a></li>
+    
+      <li><a href="../03-reference/MSStyleFill.html">MSStyleFill</a></li>
+    
+      <li><a href="../03-reference/MSStyleInnerShadow.html">MSStyleInnerShadow</a></li>
+    
+      <li><a href="../03-reference/MSStylePartCollection.html">MSStylePartCollection</a></li>
+    
+      <li><a href="../03-reference/MSStyleShadow.html">MSStyleShadow</a></li>
+    
+      <li><a href="../03-reference/MSTextLayer.html">MSTextLayer</a></li>
+    
+    </ul>
+  
+    <h2>Resources</h2>
+    
+    <ul>
+    
+      <li><a href="../04-resources/01.html">Links</a></li>
+    
+    </ul>
+  
+
+
+				</nav>
+			</aside>
+			
+			<article class="" role="main">
+				<h1>Basics</h1>
+				<h2>Sharing Code Between Plugins</h2>
+
+<p>Once your collection of plugins starts growing, you'll probably want to reuse code bit between some of them. You can do this by using the <code>#import</code> feature.</p>
+
+<p>This feature lets you include other files in your plugin. The syntax is simple:</p>
+
+<pre><code>#import 'path/to/your/file'
+</code></pre>
+
+<p>Please note:</p>
+
+<ul>
+<li>the included file can have any extension. Usually it's .js, but you can use anything you like.</li>
+<li>you need to use single quotes.</li>
+<li>the search path for an imported file is: current folder first, then plugins root folder. So, if you bundle a library.js file with your plugin you can use <code>#import 'library.js'</code>and be sure that Sketch will load your version.</li>
+</ul>
+
+				
+					<div class="support-pagination">
+						
+						<a href="02.html" class="next"><span>Working with Selections</span></a>
+					</div>
+				
+			</article>
+		</div>
+	</div>
+</section>
+
+
+
+
+<footer class="main-footer" role="contentinfo">
+	<div class="wrapper">
+		<nav>
+			<small>&copy; Bohemian Coding</small>
+			<ul role="navigation">
+				
+<li><a href="../../../../about-us">About us</a></li>
+<li><a href="../../../../../bohemiancoding.tumblr.com/default.htm">Blog</a></li>
+<li><a href="../../../../press">Press</a></li>
+<li><a href="../../../../../twitter.com/bohemiancoding">Twitter</a></li>
+<li><a href="../../../../../facebook.com/sketchapp">Facebook</a></li>
+
+			</ul>
+		</nav>
+	</div>
+</footer>
+
+<script src="../../../../../ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="../../../../static/js/shadowbox.js"></script>
+<script src="../../../../static/js/main.js"></script>
+
+<script>
+$(function(){
+	$(".support-nav.toc a").each(function(){
+		if ($(this).prop('href') == window.location.href) {
+            $(this).addClass('active');
+        }
+	});
+});
+</script>
+
+<script type="text/javascript">
+  var GoSquared = {};
+  GoSquared.acct = "GSN-033658-T";
+  (function(w){
+    function gs(){
+      w._gstc_lt = +new Date;
+      var d = document, g = d.createElement("script");
+      g.type = "text/javascript";
+      g.src = "../../../../../d1l6p2sc9645hc.cloudfront.net/tracker.js";
+      var s = d.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(g, s);
+    }
+    w.addEventListener ?
+      w.addEventListener("load", gs, false) :
+      w.attachEvent("onload", gs);
+  })(window);
+</script>
+</body>
+</html>
